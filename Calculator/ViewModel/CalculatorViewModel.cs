@@ -19,11 +19,205 @@ using MongoDB.Shared;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver.Linq;
+using System.ComponentModel;
+using Calculator.ViewModels;
+using Calculator.Model;
 
 namespace Calculator.ViewModel
 {
-    class CalculatorViewModel
+    class CalculatorViewModel : ObservableObject
     {
+        #region Members
+        IMongoCollection<Cal> operations;
+        CalculatorModel model;
+        ICommand addButton;
+        ICommand subButton;
+        ICommand mulButton;
+        ICommand divButton;
+        ICommand viewButton;
+        string viewBtnContent;
+        string numberOne;
+        string numberTwo;
+        string result;
+        #endregion
 
+        public CalculatorViewModel()
+        {
+            model = new CalculatorModel();
+            addButton = new RelayCommand(Add);
+            subButton = new RelayCommand(Sub);
+            mulButton = new RelayCommand(Mul);
+            divButton = new RelayCommand(Div);
+            viewButton = new RelayCommand(View);
+            DBConnection dbc = DBConnection.GetInstance();
+            operations = dbc.GetAccess("CalculatorDB", "Operations");
+        }
+
+        #region Properties
+        /// <summary>
+        /// Display View button content
+        /// </summary>
+        public string ViewBtnContent
+        {
+            get { return "VIEW"; }
+        }
+
+        public string NumberOne
+        {
+            get { return numberOne; }
+            set
+            {
+                if (!String.Equals(this.numberOne, value))
+                {
+                    this.numberOne = value;
+                    NotifyPropertyChanged("NumberOne");
+                }
+            }
+        }
+
+        public string NumberTwo
+        {
+            get { return numberTwo; }
+            set
+            {
+                if (!String.Equals(this.numberTwo, value))
+                {
+                    this.numberTwo = value;
+                    NotifyPropertyChanged("NumberTwo");
+                }
+            }
+        }
+
+        public string Result
+        {
+            get { return result; }
+            set
+            {
+                this.result = value;
+                NotifyPropertyChanged("Result");
+            }
+        }
+
+        public ICommand AddButton
+        {
+            get { return addButton; }
+            set { addButton = value; }
+        }
+
+        public ICommand SubButton
+        {
+            get { return subButton; }
+            set { subButton = value; }
+        }
+
+        public ICommand MulButton
+        {
+            get { return mulButton; }
+            set { mulButton = value; }
+        }
+
+        public ICommand DivButton
+        {
+            get { return divButton; }
+            set { divButton = value; }
+        }
+
+        public ICommand ViewButton
+        {
+            get { return viewButton; }
+            set { viewButton = value; }
+        }
+        #endregion
+
+        /// <summary>
+        /// Add two numbers and save them in "Operations" collection
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Add(object obj)
+        {
+            int firstNumber = Int32.Parse(NumberOne);
+            int secondNumber = Int32.Parse(NumberTwo);
+            int result = model.Add(firstNumber, secondNumber);
+            Result = result.ToString();
+            Cal data = new Cal();
+            data.num1 = firstNumber;
+            data.num2 = secondNumber;
+            data.result = result;
+            operations.InsertOne(data); //Add data to the "Operations" collection
+        }
+
+        /// <summary>
+        /// Substract two numbers and save them in "Operations" collection
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Sub(object obj)
+        {
+            int firstNumber = Int32.Parse(NumberOne);
+            int secondNumber = Int32.Parse(NumberTwo);
+            int result = model.Sub(firstNumber, secondNumber);
+            Result = result.ToString();
+            Cal data = new Cal();
+            data.num1 = firstNumber;
+            data.num2 = secondNumber;
+            data.result = result;
+            operations.InsertOne(data); //Add data to the "Operations" collection
+        }
+
+        /// <summary>
+        /// Multiply two numbers and save them in "Operations" collection
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Mul(object obj)
+        {
+            int firstNumber = Int32.Parse(NumberOne);
+            int secondNumber = Int32.Parse(NumberTwo);
+            int result = model.Mul(firstNumber, secondNumber);
+            Result = result.ToString();
+            Cal data = new Cal();
+            data.num1 = firstNumber;
+            data.num2 = secondNumber;
+            data.result = result;
+            operations.InsertOne(data); //Add data to the "Operations" collection
+        }
+
+        /// <summary>
+        /// Divide two numbers and save them in "Operations" collection
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void Div(object obj)
+        {
+            int firstNumber = Int32.Parse(NumberOne);
+            int secondNumber = Int32.Parse(NumberTwo);
+            int result = model.Div(firstNumber, secondNumber);
+            Result = result.ToString();
+            Cal data = new Cal();
+            data.num1 = firstNumber;
+            data.num2 = secondNumber;
+            data.result = result;
+            operations.InsertOne(data); //Add data to the "Operations" collection
+        }
+
+        /// <summary>
+        /// View numbers from the "Operations" collection which give the output equals to the given "Result"
+        /// </summary>
+        /// <param name="obj"></param>
+        public void View(object obj)
+        {
+            int value = Int32.Parse(Result);
+            var query =
+            operations.AsQueryable<Cal>()
+            .Where(e => e.result == value)
+            .Select(e => e);
+
+            foreach (var operation in query)
+            {
+                NumberOne = operation.num1.ToString();
+                NumberTwo = operation.num2.ToString();
+            }
+        }
     }
 }
