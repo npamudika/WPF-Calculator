@@ -1,5 +1,5 @@
 # WPF-Calculator
-This is a Calculator Application implemented using **WPF** and **MongoDB**.
+This is a Calculator Application implemented using **WPF**,**MVVM** and **MongoDB**.
 
 Windows Presentation Foundation (WPF) lets us create desktop client applications for Windows with visually stunning user experiences. WPF is Microsoft’s latest approach to a GUI framework, used with the .NET framework.
       
