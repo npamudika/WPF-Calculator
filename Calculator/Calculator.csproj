@@ -69,6 +69,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Cal.cs" />
+    <Compile Include="Data.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Model\CalculatorModel.cs" />
     <Compile Include="RelayCommand.cs" />
@@ -90,6 +91,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\DataGrid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

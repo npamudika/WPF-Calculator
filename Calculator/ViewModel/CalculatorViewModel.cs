@@ -22,6 +22,7 @@ using MongoDB.Driver.Linq;
 using System.ComponentModel;
 using Calculator.ViewModels;
 using Calculator.Model;
+using System.Collections.ObjectModel;
 
 namespace Calculator.ViewModel
 {
@@ -35,10 +36,12 @@ namespace Calculator.ViewModel
         ICommand mulButton;
         ICommand divButton;
         ICommand viewButton;
+        ICommand loadButton;
         string viewBtnContent;
         string numberOne;
         string numberTwo;
         string result;
+        public ObservableCollection<Data> calCollection;
         #endregion
 
         public CalculatorViewModel()
@@ -49,8 +52,10 @@ namespace Calculator.ViewModel
             mulButton = new RelayCommand(Mul);
             divButton = new RelayCommand(Div);
             viewButton = new RelayCommand(View);
+            loadButton = new RelayCommand(LoadValues);
             DBConnection dbc = DBConnection.GetInstance();
             operations = dbc.GetAccess("CalculatorDB", "Operations");
+            calCollection = new ObservableCollection<Data>();
         }
 
         #region Properties
@@ -98,6 +103,16 @@ namespace Calculator.ViewModel
             }
         }
 
+        public ObservableCollection<Data> CalCollection
+        {
+            get { return calCollection; }
+            set
+            {
+                calCollection = value;
+                NotifyPropertyChanged("calCollection");
+            }
+        }
+
         public ICommand AddButton
         {
             get { return addButton; }
@@ -126,6 +141,12 @@ namespace Calculator.ViewModel
         {
             get { return viewButton; }
             set { viewButton = value; }
+        }
+
+        public ICommand LoadButton
+        {
+            get { return loadButton; }
+            set { loadButton = value; }
         }
         #endregion
 
@@ -217,6 +238,27 @@ namespace Calculator.ViewModel
             {
                 NumberOne = operation.num1.ToString();
                 NumberTwo = operation.num2.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Load the values in the "Operations" Collection
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public void LoadValues(object obj)
+        {
+            var queryData =
+            from e in operations.AsQueryable<Cal>()
+            select e;
+
+            foreach (var operation in queryData)
+            {
+                Data data = new Data();
+                data.NumberOne = operation.num1;
+                data.NumberTwo = operation.num2;
+                data.Result = operation.result;
+                calCollection.Add(data);
             }
         }
     }

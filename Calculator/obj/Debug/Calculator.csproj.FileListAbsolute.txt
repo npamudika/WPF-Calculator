@@ -17,6 +17,7 @@ D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.GridFS.xml
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.Legacy.pdb
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.Legacy.xml
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Resources.baml
+D:\Projects\WPF\Calculator\Calculator\obj\Debug\Styles\DataGrid.baml
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Styles\Styles.baml
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\App.baml
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\MainWindow.g.cs

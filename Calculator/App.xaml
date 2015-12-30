@@ -6,6 +6,7 @@
         <ResourceDictionary >
             <ResourceDictionary.MergedDictionaries >
                 <ResourceDictionary Source="D:\Projects\WPF\Calculator\Calculator\Styles\Styles.xaml"/>
+                <ResourceDictionary Source="D:\Projects\WPF\Calculator\Calculator\Styles\DataGrid.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

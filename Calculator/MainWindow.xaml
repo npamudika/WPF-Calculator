@@ -1,17 +1,18 @@
 ﻿<Window x:Class="Calculator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Calculator" Height="380" Width="540"
+        Title="Calculator" Height="680" Width="480"
         xmlns:local="clr-namespace:Calculator.ViewModel">
     <Window.DataContext>
         <local:CalculatorViewModel/>
     </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="75*"></RowDefinition>
-            <RowDefinition Height="75*"></RowDefinition>
-            <RowDefinition Height="75*" ></RowDefinition>
-            <RowDefinition Height="75*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="60*" ></RowDefinition>
+            <RowDefinition Height="60*"></RowDefinition>
+            <RowDefinition Height="200*"></RowDefinition>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -33,6 +34,15 @@
         <Button Style="{StaticResource ButtonStyle}" Name="Sub" Command="{Binding SubButton}" Grid.Row="2" Grid.Column="1">-</Button>
         <Button Style="{StaticResource ButtonStyle}" Name="Div" Command="{Binding DivButton}" Grid.Row="2" Grid.Column="2">/</Button>
         <Button Style="{StaticResource ButtonStyle}" Name="Mul" Command="{Binding MulButton}" Grid.Row="2" Grid.Column="3">*</Button>
+        <Button Style="{StaticResource ButtonStyle}" x:Name="Load" Command="{Binding LoadButton}" Grid.Column="3" Content="LOAD"/>
         <Button Style="{StaticResource ButtonStyle}" x:Name="View" Command="{Binding ViewButton}" Grid.Row="3" Grid.Column="3" Content="{Binding Path=ViewBtnContent}"/>
+        <!--<DataGrid Style="{StaticResource GridStyle}" Name="CalValues" CanUserAddRows="False" AutoGenerateColumns="False" CanUserResizeColumns="True" CanUserSortColumns="True" IsReadOnly="True" ItemsSource="{Binding calCollection}" HeadersVisibility="All" Margin="10" Grid.Row="4" Grid.ColumnSpan="4">-->
+        <DataGrid Style="{StaticResource GridStyle}" Name="CalValues" ItemsSource="{Binding Path=CalCollection}" Margin="10" Grid.Row="4" Grid.ColumnSpan="4">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="NUM 1" IsReadOnly="True" Width="150" Binding="{Binding NumberOne, Mode=TwoWay}"/>
+                <DataGridTextColumn Header="NUM 2" IsReadOnly="True" Width="150" Binding="{Binding NumberTwo, Mode=TwoWay}"/>
+                <DataGridTextColumn Header="RESULT" IsReadOnly="True" Width="160" Binding="{Binding Result, Mode=TwoWay}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
