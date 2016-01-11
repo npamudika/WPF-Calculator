@@ -12,7 +12,7 @@
         <Setter Property="Background" Value="{StaticResource BlueLightGradientBrush}" />
         <Setter Property="BorderBrush" Value="#FFA6CCF2" />
         <Setter Property="RowBackground" Value="White" />
-        <Setter Property="AlternatingRowBackground" Value="#FDFFD0" />
+        <Setter Property="AlternatingRowBackground" Value="#FFD6E0F3" />
         <Setter Property="HorizontalGridLinesBrush" Value="Transparent" />
         <Setter Property="VerticalGridLinesBrush" Value="#FFD3D0" />
         <Setter Property="RowHeaderWidth" Value="0" />

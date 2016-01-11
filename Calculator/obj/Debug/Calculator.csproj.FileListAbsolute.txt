@@ -32,3 +32,6 @@ D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.exe
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.pdb
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\log4net.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\log4net.xml
+D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
