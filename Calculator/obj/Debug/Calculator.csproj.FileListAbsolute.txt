@@ -1,11 +1,28 @@
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\Calculator.exe.config
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\Calculator.exe
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Common.Logging.Core.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Common.Logging.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\log4net.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WPF.dll
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Bson.dll
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.Core.dll
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.dll
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.GridFS.dll
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.Legacy.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\NLog.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Common.Logging.pdb
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Common.Logging.xml
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Common.Logging.Core.pdb
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Common.Logging.Core.xml
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\log4net.xml
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.xml
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WPF.xml
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Bson.pdb
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Bson.xml
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.pdb
@@ -16,6 +33,7 @@ D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.GridFS.pdb
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.GridFS.xml
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.Legacy.pdb
 D:\Projects\WPF\Calculator\Calculator\bin\Debug\MongoDB.Driver.Legacy.xml
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\NLog.xml
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Resources.baml
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Styles\DataGrid.baml
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Styles\Styles.baml
@@ -32,6 +50,43 @@ D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.exe
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.pdb
-D:\Projects\WPF\Calculator\Calculator\bin\Debug\log4net.dll
-D:\Projects\WPF\Calculator\Calculator\bin\Debug\log4net.xml
 D:\Projects\WPF\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Mindscape.Raygun4Net.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Mindscape.Raygun4Net4.dll
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Mindscape.Raygun4Net.pdb
+D:\Projects\WPF\Calculator\Calculator\bin\Debug\Mindscape.Raygun4Net4.pdb
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\Calculator.exe.config
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\Calculator.exe
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\Calculator.pdb
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Bson.dll
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.Core.dll
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.dll
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.GridFS.dll
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.Legacy.dll
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\NLog.dll
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Bson.pdb
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Bson.xml
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.pdb
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.xml
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.Core.pdb
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.Core.xml
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.GridFS.pdb
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.GridFS.xml
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.Legacy.pdb
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\MongoDB.Driver.Legacy.xml
+D:\Projects\WPF\Calculator - Petter\Calculator\bin\Debug\NLog.xml
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Styles\DataGrid.baml
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Styles\Styles.baml
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\App.baml
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\MainWindow.g.cs
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\App.g.cs
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Calculator_MarkupCompile.cache
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Calculator_MarkupCompile.lref
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\MainWindow.baml
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Calculator.g.resources
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Calculator.exe
+D:\Projects\WPF\Calculator - Petter\Calculator\obj\Debug\Calculator.pdb

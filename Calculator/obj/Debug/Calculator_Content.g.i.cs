@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("config/log.xml")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("nlog.config")]
 
 

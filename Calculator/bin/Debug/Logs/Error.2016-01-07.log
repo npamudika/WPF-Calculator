@@ -1,3 +1,0 @@
-Date :01/07/16 16:12:15 ERROR: Div, ERR, Attempted to divide by zero.System.DivideByZeroException: Attempted to divide by zero.
-   at Calculator.Model.CalculatorModel.Div(Int32 firstNumber, Int32 secondNumber) in D:\Projects\WPF\Calculator\Calculator\Model\CalculatorModel.cs:line 28
-   at Calculator.ViewModel.CalculatorViewModel.Div(Object obj) in D:\Projects\WPF\Calculator\Calculator\ViewModels\CalculatorViewModel.cs:line 218

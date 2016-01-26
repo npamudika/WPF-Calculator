@@ -34,10 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MongoDB.Bson">
       <HintPath>C:\Program Files\MongoDB\CSharpDriver-2.2.0\MongoDB.Bson.dll</HintPath>
     </Reference>
@@ -53,7 +49,12 @@
     <Reference Include="MongoDB.Driver.Legacy">
       <HintPath>C:\Program Files\MongoDB\CSharpDriver-2.2.0\MongoDB.Driver.Legacy.dll</HintPath>
     </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.2.3\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
@@ -78,12 +79,9 @@
     <Compile Include="Cal.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="DBConnection.cs" />
-    <Compile Include="LogFileManager.cs" />
     <Compile Include="Model\CalculatorModel.cs" />
+    <Compile Include="NLogTest.cs" />
     <Compile Include="RelayCommand.cs" />
-    <Compile Include="Resources.xaml.cs">
-      <DependentUpon>Resources.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModels\CalculatorViewModel.cs" />
     <Compile Include="ViewModels\ObservableObject.cs" />
     <Page Include="MainWindow.xaml">
@@ -98,10 +96,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Resources.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Styles\DataGrid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,13 +131,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Image.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Config\Log.xml" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

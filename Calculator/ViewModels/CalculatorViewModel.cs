@@ -23,6 +23,8 @@ using System.ComponentModel;
 using Calculator.ViewModels;
 using Calculator.Model;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using NLog;
 
 namespace Calculator.ViewModel
 {
@@ -44,6 +46,10 @@ namespace Calculator.ViewModel
         public ObservableCollection<Data> calCollection;
         #endregion
 
+        //Create a Logger instance with the same name as the class
+        Logger logger = LogManager.GetCurrentClassLogger();
+        NLogTest nlt = new NLogTest();
+
         public CalculatorViewModel()
         {
             model = new CalculatorModel();
@@ -56,6 +62,7 @@ namespace Calculator.ViewModel
             DBConnection dbc = DBConnection.GetInstance();
             operations = dbc.GetAccess("CalculatorDB", "Operations");
             calCollection = new ObservableCollection<Data>();
+            nlt.Run();  //NLog Configuration implementation
         }
 
         #region Properties
@@ -166,7 +173,7 @@ namespace Calculator.ViewModel
             data.num2 = secondNumber;
             data.result = result;
             operations.InsertOne(data); //Add data to the "Operations" collection
-            LogFileManager.Instance.GetEventLogger().Debug("ADD, OK, NUM1=" + firstNumber + ", NUM2=" + secondNumber + ", RESULT=" + result);
+            logger.Debug("ADD, OK, NUM1=" + firstNumber + ", NUM2=" + secondNumber + ", RESULT=" + result);
         }
 
         /// <summary>
@@ -185,7 +192,7 @@ namespace Calculator.ViewModel
             data.num2 = secondNumber;
             data.result = result;
             operations.InsertOne(data); //Add data to the "Operations" collection
-            LogFileManager.Instance.GetEventLogger().Debug("SUB, OK, NUM1=" + firstNumber + ", NUM2=" + secondNumber + ", RESULT=" + result);
+            logger.Debug("SUB, OK, NUM1=" + firstNumber + ", NUM2=" + secondNumber + ", RESULT=" + result);
         }
 
         /// <summary>
@@ -204,7 +211,7 @@ namespace Calculator.ViewModel
             data.num2 = secondNumber;
             data.result = result;
             operations.InsertOne(data); //Add data to the "Operations" collection
-            LogFileManager.Instance.GetEventLogger().Debug("MUL, OK, NUM1=" + firstNumber + ", NUM2=" + secondNumber + ", RESULT=" + result);
+            logger.Debug("MUL, OK, NUM1=" + firstNumber + ", NUM2=" + secondNumber + ", RESULT=" + result);
         }
 
         /// <summary>
@@ -225,13 +232,13 @@ namespace Calculator.ViewModel
                 data.num2 = secondNumber;
                 data.result = result;
                 operations.InsertOne(data); //Add data to the "Operations" collection
-                LogFileManager.Instance.GetEventLogger().Debug("DIV, OK, NUM1=" + firstNumber + ", NUM2=" + secondNumber + ", RESULT=" + result);
+                logger.Debug("DIV, OK, NUM1=" + firstNumber + ", NUM2=" + secondNumber + ", RESULT=" + result);
             }
             catch (Exception e)
             {
                 Result = "Error";
-                LogFileManager.Instance.GetEventLogger().Debug("DIV, ERR");
-                LogFileManager.Instance.GetErrorLogger().Error("DIV, ERR, " + e.Message + e);
+                //Logging using NLog
+                logger.Debug("DIV, ERR, " + e.Message + e);
             }
         }
 

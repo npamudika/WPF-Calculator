@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{2578E4BC-476B-4E66-A0D8-820581A80F11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorAPI", "CalculatorAPI\CalculatorAPI.csproj", "{19695BB4-2FC3-4488-BB28-654443FDCA7D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +15,11 @@ Global
 		{2578E4BC-476B-4E66-A0D8-820581A80F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2578E4BC-476B-4E66-A0D8-820581A80F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2578E4BC-476B-4E66-A0D8-820581A80F11}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19695BB4-2FC3-4488-BB28-654443FDCA7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19695BB4-2FC3-4488-BB28-654443FDCA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19695BB4-2FC3-4488-BB28-654443FDCA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19695BB4-2FC3-4488-BB28-654443FDCA7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Validation.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Validation.Integration.WPF.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
